@@ -11,7 +11,7 @@ export class SpotifyService {
   constructor(private httpClient: HttpClient) {}
 
   getToken():Observable<string> {
-    const url ='http://127.0.0.1:3000/spotify/bfaf911e8bb2447ebfe96db4c40e1a6e/62bee61a18f24b70b06437209db0f565';
+    const url ='https://fast-brook-18720.herokuapp.com/spotify/bfaf911e8bb2447ebfe96db4c40e1a6e/62bee61a18f24b70b06437209db0f565';
     return this.httpClient.get(url).pipe(map((data: any) => data.access_token));
   }
 
